@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
-  <script type="module" crossorigin src="./assets/index-CO5eXSjm.js"></script>
+  <script type="module" crossorigin src="./assets/index-VeNMrTym.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-D2z4Cjqv.css">
 </head>
 <body>
@@ -93,12 +93,12 @@
     <div class="popup__container">
       <button class="popup__close" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form" name="edit-profile">
-        <input type="text" class="popup__input popup__input_type_name" id="user-name" name="name" placeholder="Имя" required minlength="2" maxlength="40">
+      <form class="popup__form" name="edit-profile" novalidate>
+        <input type="text" class="popup__input popup__input_type_name" id="user-name" name="name" placeholder="Имя" required minlength="2" maxlength="40" pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$">
         <span class="popup__error user-name-error"></span>
         <input type="text" class="popup__input popup__input_type_description" id="user-description" name="about" placeholder="О себе" required minlength="2" maxlength="200">
         <span class="popup__error user-description-error"></span>
-        <button class="popup__button" type="submit">Сохранить</button>
+        <button class="popup__button popup__button_disabled" type="submit" disabled>Сохранить</button>
       </form>
     </div>
   </div>
@@ -108,12 +108,12 @@
     <div class="popup__container">
       <button class="popup__close" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form" name="new-place">
-        <input type="text" class="popup__input popup__input_type_card-name" id="place-name" name="name" placeholder="Название" required minlength="2" maxlength="30">
+      <form class="popup__form" name="new-place" novalidate>
+        <input type="text" class="popup__input popup__input_type_card-name" id="place-name" name="name" placeholder="Название" required minlength="2" maxlength="30" pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$">
         <span class="popup__error place-name-error"></span>
         <input type="url" class="popup__input popup__input_type_url" id="place-link" name="link" placeholder="Ссылка на картинку" required>
         <span class="popup__error place-link-error"></span>
-        <button class="popup__button" type="submit">Создать</button>
+        <button class="popup__button popup__button_disabled" type="submit" disabled>Создать</button>
       </form>
     </div>
   </div>
@@ -132,10 +132,10 @@
     <div class="popup__container">
       <button class="popup__close" type="button"></button>
       <h2 class="popup__title">Обновить аватар</h2>
-      <form class="popup__form" name="edit-avatar">
+      <form class="popup__form" name="edit-avatar" novalidate>
         <input type="url" class="popup__input popup__input_type_url" id="user-avatar" name="avatar" placeholder="Ссылка на аватар" required>
         <span class="popup__error user-avatar-error"></span>
-        <button class="popup__button" type="submit">Сохранить</button>
+        <button class="popup__button popup__button_disabled" type="submit" disabled>Сохранить</button>
       </form>
     </div>
   </div>
